@@ -23,7 +23,7 @@ body {
 }
 
 img {
-  max-width: 400px;
+  width: 100%;
 }
 
 .container {
@@ -31,7 +31,32 @@ img {
   flex-direction: column;
   align-items: center;
 
-  max-width: 600px;
+  max-width: 1200px;
+
+  margin: auto;
+  padding: 10px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.gallery-item {
+  width: calc((100% - 8 * 15px) / 4);
+  margin: 15px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stats-item {
+  display: flex;
+  align-items: center;
 }
 
 .title {
@@ -68,16 +93,14 @@ input {
   cursor: pointer;
   font-size: 18px;
   height: 40px;
-  // outline: 0;
   text-align: center;
   width: 100px;
 }
 
 .load-more-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
+  margin: 0 auto 40px;
+  display: none;
+  width: 150px;
 }
 
 .load-more-btn:active,

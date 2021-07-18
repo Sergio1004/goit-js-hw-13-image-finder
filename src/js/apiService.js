@@ -9,9 +9,9 @@ export default class ImagesApiService {
 
     async fetchImages() {
         const response = await fetch(`${BASE_URL}?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${API_KEY}`);
-        const image = await response.json();
+        const images = await response.json();
         this.incrementPage();
-        return await image.hits;
+        return await images.hits;
     }
 
     incrementPage() {
