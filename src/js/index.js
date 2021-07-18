@@ -1,9 +1,9 @@
 import '../sass/main.scss';
+import './apiService';
 import '@pnotify/core/dist/BrightTheme.css';
 import "@pnotify/core/dist/PNotify.css";
 import { error, notice } from "@pnotify/core";
 import { refs } from './refs.js';
-import './apiService';
 import ImagesApiService from './apiService.js';
 import imageCardTpl from '../templates/imageCardTpl.hbs';
 
