@@ -13,6 +13,13 @@ body {
 body {
   justify-content: center;
   display: flex;
+  background: linear-gradient(
+    90deg,
+    rgba(141, 156, 228, 1) 0%,
+    rgba(166, 166, 215, 1) 25%,
+    rgba(196, 210, 226, 1) 55%,
+    rgba(131, 206, 224, 1) 75%
+  );
 }
 
 img {
@@ -54,7 +61,7 @@ input {
 
 .load-more-btn,
 .search-btn {
-  background-color: #08d;
+  background-color: #16c007;
   border-radius: 12px;
   border: none;
   color: #eee;
@@ -75,5 +82,5 @@ input {
 
 .load-more-btn:active,
 .search-btn:active {
-  background-color: #06b;
+  background-color: rgb(2, 175, 2);
 }
