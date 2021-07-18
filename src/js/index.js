@@ -56,7 +56,6 @@ function reset() {
 async function onLoadMore() {
     const images = await imagesApiService.fetchImages();
     renderImages(images)
-    imagesApiService.incrementPage()
 }
 
 function scrollLoad() {
