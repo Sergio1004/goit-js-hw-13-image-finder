@@ -26,6 +26,11 @@ img {
   width: 100%;
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -34,6 +39,7 @@ img {
   max-width: 1200px;
 
   margin: auto;
+  margin-top: 40px;
   padding: 10px;
 }
 
@@ -57,6 +63,11 @@ img {
 .stats-item {
   display: flex;
   align-items: center;
+  font-weight: bold;
+}
+
+.material-icons {
+  color: #f74a06;
 }
 
 .title {

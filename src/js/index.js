@@ -30,24 +30,23 @@ async function onSearchImage(e) {
         
         reset()
         renderImages(images)
-
-
-    } catch {
+    }
+    catch {
         return error({
-                text: "Enter something",
-                delay: 2000,
-            });
+            text: "Enter something",
+            delay: 2000,
+        });
     }
 }
 
 function renderImages(images) {
     refs.gallery.insertAdjacentHTML('beforeend', imageCardTpl(images));
-console.log(images)
+    refs.loadMoreBtn.style.display = 'block';
+    scrollLoad()
+
     if (images.length < 12) {
         refs.loadMoreBtn.style.display = 'none';
     }
-    refs.loadMoreBtn.style.display = 'block';
-    scrollLoad()
 }
 
 function reset() {
@@ -62,7 +61,7 @@ async function onLoadMore() {
 
 function scrollLoad() {
     setTimeout(() => {
-        refs.loadMoreBtn.scrollIntoView({
+        refs.container.scrollIntoView({
         behavior: 'smooth',
         block: 'end',
     });
