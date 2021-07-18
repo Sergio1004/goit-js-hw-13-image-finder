@@ -4,6 +4,8 @@ import '@pnotify/core/dist/BrightTheme.css';
 import "@pnotify/core/dist/PNotify.css";
 import { error, notice } from "@pnotify/core";
 import { refs } from './refs.js';
+import * as basicLightbox from 'basiclightbox'
+import 'basiclightbox/dist/basicLightbox.min.css';
 import ImagesApiService from './apiService.js';
 import imageCardTpl from '../templates/imageCardTpl.hbs';
 
@@ -65,4 +67,15 @@ function scrollLoad() {
         block: 'end',
     });
     }, 1000)
+}
+
+refs.gallery.addEventListener('click', imageModal);
+function imageModal(e) {
+    if (e.target.nodeName !== 'IMG') {
+        return;
+    }
+    const instance = basicLightbox.create(`
+    <img src="${e.target.dataset.source}" width="800" height="600">
+`);
+    instance.show();
 }
