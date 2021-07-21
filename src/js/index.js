@@ -61,12 +61,10 @@ async function onLoadMore() {
 }
 
 function scrollLoad() {
-    setTimeout(() => {
         refs.container.scrollIntoView({
         behavior: 'smooth',
         block: 'end',
     });
-    }, 1000)
 }
 
 refs.gallery.addEventListener('click', imageModal);
@@ -75,7 +73,7 @@ function imageModal(e) {
         return;
     }
     const instance = basicLightbox.create(`
-    <img src="${e.target.dataset.source}" width="800" height="600">
+    <img src="${e.target.dataset.source}" width="800">
 `);
     instance.show();
 }

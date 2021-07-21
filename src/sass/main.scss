@@ -15,10 +15,10 @@ body {
   display: flex;
   background: linear-gradient(
     90deg,
-    rgba(141, 156, 228, 1) 0%,
-    rgba(166, 166, 215, 1) 25%,
-    rgba(196, 210, 226, 1) 55%,
-    rgba(131, 206, 224, 1) 75%
+    rgb(247, 244, 197) 0%,
+    rgb(235, 236, 199) 25%,
+    rgb(242, 243, 226) 55%,
+    rgb(241, 239, 229) 75%
   );
 }
 
@@ -44,6 +44,7 @@ ol {
 }
 
 .gallery {
+  margin: 50px 0;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -52,9 +53,30 @@ ol {
 .gallery-item {
   width: calc((100% - 8 * 15px) / 4);
   margin: 15px;
+  height: 250px;
+  border: 3px solid rgba(65, 223, 45, 0.7);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image-wraper {
+  height: 210px;
+  overflow: hidden;
+}
+
+.image-photo {
+  height: 100%;
+  object-fit: cover;
 }
 
 .stats {
+  margin-top: 4px;
   display: flex;
   justify-content: space-around;
   text-align: center;
@@ -67,7 +89,7 @@ ol {
 }
 
 .material-icons {
-  color: #f74a06;
+  color: #ee7d32;
 }
 
 .title {
@@ -91,21 +113,17 @@ input {
   margin-right: 5px;
 }
 
-.gallery {
-  margin: 50px 0;
-}
-
 .load-more-btn,
 .search-btn {
   background-color: #16c007;
   border-radius: 12px;
   border: none;
-  color: #eee;
+  color: #ffffff;
   cursor: pointer;
   font-size: 18px;
   height: 40px;
   text-align: center;
-  width: 100px;
+  width: 120px;
 }
 
 .load-more-btn {
